@@ -12,7 +12,7 @@
 						<ViewCell>
 							<StackLayout Padding="10">
 								<Label Text="{Binding Location}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="16" />
-								<Label Text="{Binding Notes}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" />
+								<Label Text="{Binding Notes}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="11" />
 							</StackLayout>
 						</ViewCell>
 					</DataTemplate>

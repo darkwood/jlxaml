@@ -9,9 +9,9 @@ namespace jlxaml
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Om Jaktloggen";
 
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
+            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("http://www.jaktloggen.no")));
         }
 
         public ICommand OpenWebCommand { get; }
