@@ -14,12 +14,14 @@ namespace jlxaml
             items = new List<Hunt>();
             var mockItems = new List<Hunt>
             {
-                new Hunt { Id = Guid.NewGuid().ToString(), Location = "First location", Notes="This is a note of some length. It can be short, but it can also be of, well, some length." },
-                new Hunt { Id = Guid.NewGuid().ToString(), Location = "Second location", Notes="This is a note of some length. It can be short, but it can also be of, well, some length." },
-                new Hunt { Id = Guid.NewGuid().ToString(), Location = "Third location", Notes="This is a note of some length. It can be short, but it can also be of, well, some length." },
-                new Hunt { Id = Guid.NewGuid().ToString(), Location = "Fourth location", Notes="This is a note of some length. It can be short, but it can also be of, well, some length." },
-                new Hunt { Id = Guid.NewGuid().ToString(), Location = "Fifth location", Notes="This is a note of some length. It can be short, but it can also be of, well, some length." },
-                new Hunt { Id = Guid.NewGuid().ToString(), Location = "Sixth location", Notes="This is a note of some length. It can be short, but it can also be of, well, some length." },
+                CreateHunt(),
+                CreateHunt(),
+                CreateHunt(),
+                CreateHunt(),
+                CreateHunt(),
+                CreateHunt(),
+                CreateHunt(),
+                CreateHunt(),
             };
 
             foreach (var item in mockItems)
@@ -28,6 +30,15 @@ namespace jlxaml
             }
         }
 
+        private Hunt CreateHunt(){
+            return new Hunt { 
+                Id = Guid.NewGuid().ToString(), 
+                Location = "Høylandet", 
+                DateFrom = DateTime.Today,
+                DateTo = DateTime.Today.AddDays(3),
+                Notes="This is a note of some length. It can be short, but it can also be of, well, some length." };
+
+        }
         public async Task<bool> AddItemAsync(Hunt item)
         {
             items.Add(item);

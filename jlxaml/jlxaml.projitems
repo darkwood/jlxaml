@@ -9,36 +9,54 @@
     <Import_RootNamespace>jlxaml</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Hunt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\CloudDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HuntDetailViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HuntsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
-      <DependentUpon>AboutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\HuntDetailPage.xaml.cs">
-      <DependentUpon>HuntDetailPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\HuntsPage.xaml.cs">
-      <DependentUpon>HuntsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\NewHuntPage.xaml.cs">
-      <DependentUpon>NewHuntPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Hunts\ViewModels\HuntDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Hunts\ViewModels\HuntsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Hunts\Views\HuntDetailPage.xaml.cs">
+      <DependentUpon>..\..\Views\HuntDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Hunts\Views\HuntsPage.xaml.cs">
+      <DependentUpon>..\..\Views\HuntsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Hunts\Views\NewHuntPage.xaml.cs">
+      <DependentUpon>..\..\Views\NewHuntPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Base\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)About\AboutPage.xaml.cs">
+      <DependentUpon>..\Views\AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)About\AboutViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Hunts\Models\Hunt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logs\LogsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logs\LogsPage.xaml.cs">
+      <DependentUpon>LogsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Logs\Log.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HuntDetailPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HuntsPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewHuntPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Hunts\Views\HuntDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Hunts\Views\HuntsPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Hunts\Views\NewHuntPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)About\AboutPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Logs\LogsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Hunts\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Hunts\ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Hunts\Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Base\" />
+    <Folder Include="$(MSBuildThisFileDirectory)About\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Hunts\Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Logs\" />
   </ItemGroup>
 </Project>
